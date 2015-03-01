@@ -5,22 +5,22 @@ import java.io.Serializable;
 public class Client implements Serializable {
 	private static final long serialVersionUID = -6358742378177948329L;
 
-	private String name;
+	private String id;
 	private double purchases;
 	
 	public Client() {}
 	
-	public Client(String name, double purchases) {
-		this.name = name;
+	public Client(String id, double purchases) {
+		this.id = id;
 		this.purchases = purchases;
 	}
 
-	public String getName() {
-		return name;
+	public String getId() {
+		return id;
 	}
 	
-	public void setName(String name) {
-		this.name = name;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public double getPurchases() {
