@@ -1,7 +1,6 @@
 package xpadro.java.streams.service;
 
 import org.springframework.web.client.RestTemplate;
-
 import xpadro.java.streams.model.Client;
 
 public class ServiceInvoker {

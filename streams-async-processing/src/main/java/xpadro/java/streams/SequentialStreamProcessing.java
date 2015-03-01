@@ -1,12 +1,11 @@
 package xpadro.java.streams;
 
-import static java.util.stream.Collectors.summingDouble;
-
 import java.util.Arrays;
 import java.util.List;
-
 import xpadro.java.streams.model.Client;
 import xpadro.java.streams.service.ServiceInvoker;
+
+import static java.util.stream.Collectors.summingDouble;
 
 public class SequentialStreamProcessing {
 	private final ServiceInvoker serviceInvoker;
