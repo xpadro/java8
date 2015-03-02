@@ -1,21 +1,22 @@
 package xpadro.java.streams;
 
+import static java.util.stream.Collectors.summingDouble;
+
 import java.util.Arrays;
 import java.util.List;
+
 import xpadro.java.streams.model.Client;
 import xpadro.java.streams.service.ServiceInvoker;
 
-import static java.util.stream.Collectors.summingDouble;
-
-public class SequentialStreamProcessing {
+public class ParallelStreamProcessing {
 	private final ServiceInvoker serviceInvoker;
 	
-	public SequentialStreamProcessing() {
+	public ParallelStreamProcessing() {
 		this.serviceInvoker = new ServiceInvoker();
 	}
 	
 	public static void main(String[] args) {
-		new SequentialStreamProcessing().start();
+		new ParallelStreamProcessing().start();
 	}
 
 	private void start() {
@@ -24,12 +25,12 @@ public class SequentialStreamProcessing {
 				"C11", "C12", "C13", "C14", "C15", "C16", "C17", "C18", "C19", "C20");
 		
 		long startTime = System.nanoTime();
-		double totalPurchases = ids.stream()
+		double totalPurchases = ids.parallelStream()
 			.map(id -> serviceInvoker.invoke(id))
 			.collect(summingDouble(Client::getPurchases));
 		
 		long endTime = (System.nanoTime() - startTime) / 1_000_000;
-		System.out.println("Sequential | Total time: " + endTime + " ms");
+		System.out.println("Parallel | Total time: " + endTime + " ms");
 		System.out.println("Total purchases: " + totalPurchases);
 	}
 }
