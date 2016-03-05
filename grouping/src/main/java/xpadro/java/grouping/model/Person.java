@@ -1,4 +1,4 @@
-package main.java.xpadro.java.grouping.model;
+package xpadro.java.grouping.model;
 
 public class Person {
     private final String name;

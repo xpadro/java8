@@ -1,7 +1,7 @@
-package main.java.xpadro.java.grouping;
+package xpadro.java.grouping;
 
-import main.java.xpadro.java.grouping.model.Person;
-import main.java.xpadro.java.grouping.model.Pet;
+import xpadro.java.grouping.model.Person;
+import xpadro.java.grouping.model.Pet;
 
 import java.util.Arrays;
 import java.util.List;
