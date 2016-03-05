@@ -21,6 +21,7 @@ public class Pet {
     public String toString() {
         return "Pet{" +
                 "name='" + name + '\'' +
+                ", age=" + age +
                 '}';
     }
 }
